@@ -10,7 +10,7 @@ struct menuItemType{
 };
 
 int getData(menuItemType menuList[]){ //menuList yra masyvas kuris skaito is meniu.txt
-    ifstream file("C:\\Users\\elzeg\\Desktop\\helloworld\\meniu.txt"); //Atidaromas failas
+    ifstream file("C:\\Users\\elzeg\\Desktop\\helloworld\\Darbai_atyskaitymui\\meniu.txt"); //Atidaromas failas
     int n = 0;
 
     // patikrina ar failas tikrai rastas
@@ -43,7 +43,7 @@ int showMenu(menuItemType menuList[],int n){
 
 
 double printCheck(menuItemType menuList[], int n){
-    ofstream file("C:\\Users\\elzeg\\Desktop\\helloworld\\kvitas.txt"); //failas kvitui
+    ofstream file("C:\\Users\\elzeg\\Desktop\\helloworld\\Darbai_atsykaitymui\\kvitas.txt"); //failas kvitui
 
     if (!file) {
     cout << "Nepavyko sukurti kvitas.txt" << endl;

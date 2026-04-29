@@ -1,8 +1,7 @@
 SASKAITA
-5 Prancuziskas_skrebutis             9.95 EUR
-2 Keksiukas_su_vysnia                1.98 EUR
-7 Prancuziskas_skrebutis             13.93 EUR
-3 Arbata                             2.25 EUR
+3 Kiaulienos_sonine_su_keptu_kiausiniu 7.35 EUR
+2 Prancuziskas_skrebutis               3.98 EUR
+4 Pusryciu_dribsniai                   2.76 EUR
 
-Mokesčiai (21%) 5.90 EUR
- Galutinė suma 34.01 EUR
+Mokesčiai (21%) 2.96 EUR
+ Galutinė suma 17.05 EUR
