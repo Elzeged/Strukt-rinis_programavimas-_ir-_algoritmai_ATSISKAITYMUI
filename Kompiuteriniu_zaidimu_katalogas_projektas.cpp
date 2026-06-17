@@ -228,17 +228,21 @@ int ieskotiPav(zaidimas zaidimai[], int kiek) {
     return 0;
 }
 //Papildoma funkcija rikiavimas pagal įvertinimą
-int rikiuoti(zaidimas zaidimai[], int kiek){
-    for(int a=1; a<kiek -1; a++){
-        for (int b=a+1; b< kiek; b++){
-            if (zaidimai[a].i< zaidimai[b].i){
+int rikiuoti(zaidimas zaidimai[], int kiek) {
+    for (int a = 0; a < kiek - 1; a++) {
+        for (int b = 0; b < kiek - 1 - a; b++) {
+
+            // Jeigu pirmo zaidimo ivertinimas mazesnis uz kito, tada juos sukeicia vietomis
+            if (zaidimai[b].i < zaidimai[b + 1].i) {
                 zaidimas laikinas = zaidimai[b];
-                zaidimai[a] = zaidimai[b];
-                zaidimai[b] = laikinas;
+                zaidimai[b] = zaidimai[b + 1];
+                zaidimai[b + 1] = laikinas;
             }
         }
     }
-    cout<<"žaidimai surikiuoti pagal įvertinimą."<< endl;
+
+    cout << "Žaidimai surikiuoti nuo geriausio iki blogiausio įvertinimo." << endl;
+
     return 0;
 }
 //Papildoma funkcija statistika
@@ -276,6 +280,7 @@ int meniu(){
     cout<<" 7. Rikiuoti pagal įvertinimą"<<endl;
     cout<<" 8. Statistika"<<endl;
     cout<<" 9. Išaugoti duomenis"<<endl;
+    cout<<" 10. Atstatyti pradine tvarka iš failo"<< endl;
     cout<<" 0. Baigti "<< endl;
     cout<<" Pasirinkimas: ";
     return 0;
@@ -294,6 +299,7 @@ int main(){
 
         switch (p){
             case 1:
+            
             rodytiVisus(zaidimai, kiek);
             break;
 
@@ -332,9 +338,14 @@ int main(){
             }
             break;
 
+            case 10:
+            kiek = nuskaityti(zaidimai);
+            cout<< "Pradinė tvarka atstayta iš failo"<< endl;
+            break;
+
+
             case 0:
-            issaugoti(zaidimai, kiek);
-            cout<<" Programa baigta. Duomenys yra išsaugoti."<<endl;
+            cout<<" Programa baigta."<<endl;
             break;
 
             default:

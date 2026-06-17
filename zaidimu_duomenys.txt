@@ -1,8 +1,8 @@
 1;Counter-Strike 2;FPS;2023;8.5
 2;Minecraft;Survival;2011;9.2
-3;GTA V;Action;2013;9.0
+3;GTA V;Action;2013;9
 4;The Witcher 3;RPG;2015;9.7
-5;Fortnite;Battle Royale;2017;8.0
+5;Fortnite;Battle Royale;2017;8
 6;Cyberpunk 2077;RPG;2020;8.3
 7;Valorant;FPS;2020;8.1
 8;FIFA 23;Sports;2022;7.4
