@@ -31,16 +31,17 @@ void insertionSort(int masyvas[], int n, long long& palyginimai, long long& suke
 
 // Sujungia dvi surikiuotas masyvo dalis
 void merge(int masyvas[], int kaire, int vidurys, int desine, long long& palyginimai) {
+    //sukuriami laikini masyvai
     int kaireDalis[MAX];
     int desineDalis[MAX];
 
     int n1 = vidurys - kaire + 1;
     int n2 = desine - vidurys;
-
+    //kaire dalis kompijuojama i laikina masyva kaireDalis MAX
     for (int i = 0; i < n1; i++) {
         kaireDalis[i] = masyvas[kaire + i];
     }
-
+    //dasine dalis kompjuojama i laikina masyva desineDalis MAX
     for (int j = 0; j < n2; j++) {
         desineDalis[j] = masyvas[vidurys + 1 + j];
     }
@@ -117,10 +118,11 @@ void kopijuotiMasyva(int isKur[], int iKur[], int n) {
 
 // Testuoja abu algoritmus
 void testuotiAlgoritmus(string failoPavadinimas, string duomenuTipas) {
+    //sukuriami masyvai
     int pradinisMasyvas[MAX];
     int masyvas1[MAX];
     int masyvas2[MAX];
-
+    
     int kartojimai = 5;
 
     int n = skaitytiIsFailo(failoPavadinimas, pradinisMasyvas);
@@ -136,22 +138,22 @@ void testuotiAlgoritmus(string failoPavadinimas, string duomenuTipas) {
 
     long long mergeLaikas = 0;
     long long mergePalyginimai = 0;
-
+    //Testas kartojamas 5 kartus
     for (int i = 0; i < kartojimai; i++) {
         kopijuotiMasyva(pradinisMasyvas, masyvas1, n);
         kopijuotiMasyva(pradinisMasyvas, masyvas2, n);
 
         long long palyginimai1 = 0;
         long long sukeitimai1 = 0;
-
+        //Pradedamas laiko matavimas
         auto pradzia1 = high_resolution_clock::now();
 
         insertionSort(masyvas1, n, palyginimai1, sukeitimai1);
-
+        //Uzbaigiamas laiko matavimas
         auto pabaiga1 = high_resolution_clock::now();
-
+        //Apskaiciuojamas veikimo laikas
         long long laikas1 = duration_cast<microseconds>(pabaiga1 - pradzia1).count();
-
+        //Rezultatai pridedami prie bendros sumos
         insertionLaikas += laikas1;
         insertionPalyginimai += palyginimai1;
         insertionSukeitimai += sukeitimai1;
