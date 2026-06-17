@@ -280,7 +280,7 @@ int meniu(){
     cout<<" 7. Rikiuoti pagal įvertinimą"<<endl;
     cout<<" 8. Statistika"<<endl;
     cout<<" 9. Išaugoti duomenis"<<endl;
-    cout<<" 10. Atstatyti pradine tvarka iš failo"<< endl;
+    cout<<" 10. Atstatyti į pradinę tvarką iš failo"<< endl;
     cout<<" 0. Baigti "<< endl;
     cout<<" Pasirinkimas: ";
     return 0;
